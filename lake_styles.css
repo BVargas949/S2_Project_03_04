@@ -1,16 +1,6 @@
 ﻿@charset "utf-8";
+/* ---------------------------------------------------------------------------------------------------------------------------------------Here the character encodingthatI used was utf-8 */
 
-@font-face {
-    font-family: champagne;
-    src: url('cac_champagne.woff') format('woff'),
-        url('cac_champagne.ttf') format('truetype')
-}
-
-@font-face {
-    font-family: Dobkin;
-    src: url('DobkinPlain.woff') format('woff'),
-        url('DobkinPlain.ttf') format('truetype')
-}
 
 
 /*
@@ -27,6 +17,9 @@
 */
 
 
+/* ---------------------------------------------------------------------------------------------------------------------------------------Within the structural styles exists the specifications for the html document, body, and footer. The backround color was changed for the html using rgb, the backround color for the body was also changed with the term "burlywood". The footer had its backround color changes using rgb, the line height increased by 1.5em units, and the text aligned to the center ofthe document. ALso a small detail was adding margin space to the pararaphs so they arenot close to the html.   */
+
+
 /* structural styles */
 html {
     background-color: rgb(185, 89, 45);
@@ -41,9 +34,33 @@ body {
 footer {
     text-align: center;
     line-height: 1.5em;
-    background-color: rgb(255, 248, 205);
+    background-color: rgb(252, 240, 164);
 }
 
+p {
+    margin: 15px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------The anchors  nested within the header were given new specifications of "brown" backround color, text color of white, no text-decoration, and new google font family. Whenever the user hovers over them, they shall change color(using rgba for opacity ) and backround color(using rgb).*/
+
+/* Header styles */
+header nav a {
+    background-color: brown;
+    color: white;
+    text-decoration: none;
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+header nav a:hover,
+header nav a:active {
+    color: rgba(255, 255, 255, .8);
+    background-color: rgb(47, 95, 141);
+
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------Within the section styles all h1 headers were given new specifications such as font size of 2em units, font-weight of normal, new font family using google fonts, padding of 5 pixels from above, margin space of 15 pixels, and two decoration styles(solid, underline).All the links in the section Nav were given no backround color and given space above by 20 pixel units. Using the id to target the (rightcol) anchors, the links were given new color using rgb, new google font family,font size of 1.2em units, no decorations, and a bold font-weight. Those same links anchors were given an underline decoration when the user hovers over the link. The unordered lists of the section with an id of rightcol were styled with "square". */
 
 
 /* section styles */
@@ -51,12 +68,14 @@ section h1 {
     font-size: 2em;
     font-weight: normal;
     font-family: 'Libre Baskerville', serif;
-    ;
+
     padding: 5px 0px 0px 0px;
     margin: 15px;
     text-decoration: underline;
     text-decoration-style: solid;
 }
+
+
 
 section nav {
     background-color: none;
@@ -65,11 +84,42 @@ section nav {
 
 }
 
-/* Nav styles */
-header nav a {
-    background-color: brown;
-    color: lavender;
+section#rightcol a {
+    color: rgb(6, 61, 78);
+    font-family: 'Arapey', serif;
+    font-size: 1.2em;
     text-decoration: none;
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-weight: bold;
+}
+
+section#rightcol a:hover,
+section#rightcol a:active {
+    text-decoration: underline;
+}
+
+section#rightcol ul {
+    list-style: square;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------Here the asides were given the following styles: color(using rgb), google font famiies, font-size of 1 em units, no text-decoration, and bold text(using font-weight).When the user hovers over the aside links they shall have a new text-decoration "underine". The blockquote will also have a new font famliy and font-size of 1.5em units. */
+
+/* aside and blockquote */
+aside a {
+    color: rgb(6, 61, 78);
+    font-family: 'Arapey', serif;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+aside a:hover,
+aside a:active {
+    text-decoration: underline;
+}
+
+blockquote {
+    font-family: 'Niconne', cursive;
+    font-size: 1.5em;
 
 }
